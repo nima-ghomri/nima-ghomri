@@ -1,40 +1,115 @@
 <html lang="en">
 
 <style>
-* {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-#identification {
-    background-color: #EFB252;
-}
-#contact{
-    background-color: #D39633;
-}
+    * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    body section {
+        padding: 30px;
+        ;
+    }
+
+    #identification {
+        background-color: #EFB252;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #full-name {
+        color: white;
+        font-size: 4em;
+        margin: 0;
+        line-height: 2;
+    }
+
+    #job-title {
+        font-weight: normal;
+        font-size: 2em;
+        line-height: .2;
+    }
+
+    #tagline {}
+
+    #avatar {
+        width: 15em;
+        height: 15em;
+        align-self: self-end;
+        border: 6px solid rebeccapurple;
+        border-radius: 30px;
+    }
+
+
+
+    #contact {
+        background-color: #D39633;
+
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(5, 20%);
+        grid-template-columns: 50% 50%;
+    }
+
+    #contact a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #contact i {
+        font-size: x-large;
+        padding: 7px;
+    }
+
+    @media (max-width: 800px) {
+        #identification {
+            flex-direction: column;
+        }
+
+        #avatar {
+            width: 20em;
+            height: 20em;
+            align-self: center;
+        }
+    }
 </style>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nima Ghomri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
-<body id="body">
+<body>
     <header>
         <section id="identification">
-            <h1>Nima Ghomri</h1>
-            <h2>.NET Developer</h2>
-            <p>Self-taught Programmer, Advocate of Clean Code, Design Patterns, and Best Practices</p>
-            <img src="https://avatars.githubusercontent.com/u/85312667?v=4">
+            <div>
+                <h1 id="full-name">Nima Ghomri</h1>
+                <h2 id="job-title">.NET Developer</h2>
+                <p id="tagline">Self-taught Programmer, Advocate of Clean Code</p>
+            </div>
+            <img id="avatar" src="https://avatars.githubusercontent.com/u/85312667?v=4">
         </section>
         <section id="contact">
-            <a href="#">nima.ghomri@gmail.com</a>
-            <a href="#">+989908180786</a>
-            <a href="#">Karaj, Iran</a>
-            <a href="#">github.com/nima-ghomri</a>
-            <a href="#">nima-ghomri</a>
-            <a href="#">linkedin.com/in/nima-ghomri</a>
-            <a href="#">twitter.com/GhomriNima nima.ghomri</a>
-            <a href="#">instagram.com/nima_ghomri</a>
+            <a target="_blank" href="#"><i class="fa-solid fa-envelope"></i>nima.ghomri@gmail.com</a>
+            <a target="_blank" href="#"><i class="fa-solid fa-phone"></i>+989908180786</a>
+            <a target="_blank" href="#"><i class="fa-solid fa-location-pin"></i>Karaj, Iran</a>
+            <a target="_blank" href="https://github.com/nima-ghomri"><i class="fa-brands fa-github"></i>nima-ghomri</a>
+            <a target="_blank" href="https://stackoverflow.com/users/9882771/nima-ghomri"><i
+                    class="fa-brands fa-stack-overflow"></i>nima-ghomri</a>
+            <a target="_blank" href="https://linkedin.com/in/nima-ghomri"><i
+                    class="fa-brands fa-linkedin"></i>nima-ghomri</a>
+            <a target="_blank" href="https://t.me/nimaghomri"><i class="fa-brands fa-telegram"></i>nimaghomri</a>
+            <a target="_blank" href="https://join.skype.com/invite/kFky8d1bVZDn"><i
+                    class="fa-brands fa-skype"></i>nima.ghomri</a>
+            <a target="_blank" href="https://instagram.com/nima_ghomri"><i
+                    class="fa-brands fa-instagram"></i>nima_ghomri</a>
+            <a target="_blank" href="https://twitter.com/GhomriNima"><i class="fa-brands fa-twitter"></i>GhomriNima</a>
         </section>
     </header>
     <main>

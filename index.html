@@ -1,6 +1,16 @@
 <html lang="en">
 
 <style>
+    :root {
+        --primary-light: #ffffff;
+        --primary: #EFB252;
+        --primary-dark: #D39633;
+        
+        --secondary-light: #ffffff;
+        --secondary: #EFB252;
+        --secondary-dark: #693E6C;
+    }
+
     * {
         font-family: "Ubuntu", sans-serif;
     }
@@ -10,62 +20,63 @@
     }
 
     body section {
-        /* padding: 1em 4em; */
+        /* padding: 1vw 4vw; */
     }
 
     #identification {
-        background-color: #EFB252;
+        background-color: var(--primary);
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        padding: 3em;
+        padding: 4vw;
     }
 
     #full-name {
         color: white;
         font-weight: normal;
-        text-decoration: none;
-        font-size: 4em;
-        line-height: 1em;
+        font-size: 4vw;
+        line-height: 1vw;
         margin: 0;
     }
 
-    #job-title {
+    #profession {
         font-weight: normal;
-        font-size: 2em;
+        font-size: 2vw;
         line-height: .2;
     }
 
     #tagline {}
 
     #avatar {
-        width: 10em;
-        height: 10em;
+        width: 12vw;
+        height: 12vw;
         align-self: self-end;
-        border: 6px solid rebeccapurple;
-        border-radius: 30px;
+        border: .5vw solid var(--secondary-dark);
+        border-radius: 2vw;
     }
 
 
 
     #contact {
-        background-color: #D39633;
+        background-color: var(--primary-dark);
 
         display: grid;
         grid-auto-flow: column;
         grid-template-rows: repeat(5, 20%);
         grid-template-columns: 50% 50%;
-        padding: 1em 3em;
+        padding: 1vw 3vw;
     }
 
     #contact a {
         color: white;
         text-decoration: none;
+        font-size: 1.5vw;
     }
 
     #contact i {
-        font-size: xx-large;
-        padding: 7px;
+        width: 2vw;
+        font-size: 2vw;
+        padding: .5vw;
     }
 
     /* @media (max-width: 800px) {
@@ -74,16 +85,11 @@
         }
 
         #avatar {
-            width: 20em;
-            height: 20em;
+            width: 20vw;
+            height: 20vw;
             align-self: center;
         }
     } */
-
-    h1 {
-        color: rebeccapurple;
-        text-decoration: underline;
-    }
 
     @media print {
         @page {
@@ -98,15 +104,26 @@
     }
 
     main {
-    column-count: 2; /* Creates 2 columns */
-    column-gap: 20px; /* Space between columns */
-    padding: 3em;
-}
+        column-count: 2;
+        column-gap: 20px;
+        padding: 3vw;
+    }
+
+    main section h1 {
+        font-size: 3vw;
+        color: var(--secondary-dark);
+        text-decoration: underline;
+    }
+
+    .job-title {
+        font-size: 1.5vw;
+        font-weight: bolder;
+    }
 </style>
 
 <script>
     function printPage() {
-        var element = document.getElementById('body');
+        var elvwent = document.getElvwentById('body');
         var opt = {
             margin: 0,
             filename: 'Nima Ghomri - Resume.pdf',
@@ -115,7 +132,7 @@
             jsPDF: { unit: 'mm', format: 'A4', orientation: 'portrait' }
         };
 
-        html2pdf(element);
+        html2pdf(elvwent);
     }
 </script>
 
@@ -125,6 +142,13 @@
     <title>Nima Ghomri</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+    <!-- Ubuntu font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- html2pdf -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
         integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -135,7 +159,7 @@
         <section id="identification">
             <div>
                 <h1 id="full-name">Nima Ghomri</h1>
-                <h2 id="job-title">.NET Developer</h2>
+                <h2 id="profession">.NET Developer</h2>
                 <p id="tagline">Self-taught Programmer, Advocate of Clean Code.</p>
             </div>
             <img id="avatar" src="https://avatars.githubusercontent.com/u/85312667?v=4">
@@ -159,23 +183,23 @@
         </section>
     </header>
     <main>
-        <section title="Professional Experience">
-            <h1>Professional Experience</h1>
+        <section>
+            <h1>Experiences</h1>
 
-            <h2>.NET Developer</h2>
-            <p>Hooshkar Pardaz</p>
-            <i>2021 - 2024</i>
+            <h2 class="job-title">.NET Developer, CTO</h2>
+            <p>Hooshkar Pardaz Paya</p>
+            <i>Karaj, Iran (2021 - 2024)</i>
             <p>ERP</p>
             <ul>
                 <li>Blazor</li>
                 <li>Web Api</li>
                 <li>WPF</li>
-                <li>Console applications</li>
+                <li>Console</li>
             </ul>
 
-            <h2>.NET Developer</h2>
+            <h2 class="job-title">Developer</h2>
             <p>Freelancer</p>
-            <i>2020 - 2021</i>
+            <i>Rvwote (2020 - 2021)</i>
             <p>Develop .NET applications for online customers</p>
             <ul>
                 <li>ASP.NET</li>
@@ -183,9 +207,9 @@
                 <li>Console applications</li>
             </ul>
 
-            <h2>WPF Developer</h2>
+            <h2 class="job-title">WPF Developer</h2>
             <p>CFT Iran</p>
-            <i>2019 - 2020, Tehran, Iran</i>
+            <i>Tehran, Iran (2019 - 2020)</i>
             <p>Fire Resistance Desktop Application</p>
             <ul>
                 <li>Save profit for the company by converting a hand- calculating, time-consuming complex process into a
@@ -194,10 +218,18 @@
                 <li>Create a UI to import and export structure models.</li>
             </ul>
 
-            <h2>Graphic Designer</h2>
+            <h2 class="job-title">Teacher</h2>
+            <p>Freelancer</p>
+            <i>Tehran, Iran (2018 - 2019)</i>
+            <p>Fortran tutorial</p>
+            <ul>
+                <li>Design billboards, stands. Design visit cards, brochures. Design logos, Icons</li>
+            </ul>
+
+            <h2 class="job-title">Graphic Designer</h2>
             <p>Tarhe Badie</p>
-            <i>2013 - 2018, Rasht, Iran</i>
-            <p>Fire Resistance Desktop Application</p>
+            <i>Rasht, Iran (2013 - 2018)</i>
+            <p>CCC</p>
             <ul>
                 <li>Design billboards, stands. Design visit cards, brochures. Design logos, Icons</li>
             </ul>

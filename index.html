@@ -2,10 +2,13 @@
 
 <style>
     :root {
+        --light: white;
+        --dark: black;
+
         --primary-light: #ffffff;
         --primary: #EFB252;
         --primary-dark: #D39633;
-        
+
         --secondary-light: #ffffff;
         --secondary: #EFB252;
         --secondary-dark: #693E6C;
@@ -19,11 +22,7 @@
         margin: 0;
     }
 
-    body section {
-        /* padding: 1vw 4vw; */
-    }
-
-    #identification {
+    #informations {
         background-color: var(--primary);
         display: flex;
         justify-content: space-between;
@@ -31,21 +30,56 @@
         padding: 4vw;
     }
 
+    #informations:hover #informations-buttons button {
+        opacity: 0.5;
+    }
+    
+    #informations #informations-buttons button:hover {
+        opacity: 0.8;
+    }
+
+    #informations-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #informations-buttons {
+        position: absolute;
+        left: 1vw;
+        top: 1vw;
+    }
+
+    #informations-buttons button {
+        font-size: 3vw;
+        color: var(--light);
+        background-color: transparent;
+        border: none;
+        opacity: 0;
+        cursor: pointer;
+    }
+
     #full-name {
-        color: white;
-        font-weight: normal;
-        font-size: 4vw;
-        line-height: 1vw;
+        color: var(--light);
+        font-weight: bold;
+        font-size: 6vw;
         margin: 0;
+        padding: 0;
     }
 
     #profession {
-        font-weight: normal;
-        font-size: 2vw;
-        line-height: .2;
+        font-weight: bold;
+        font-size: 3vw;
+        line-height: 0;
+        margin: 0;
+        padding: 0;
     }
 
-    #tagline {}
+    #tagline {
+        font-size: 1.5vw;
+        padding: 0;
+        margin: 0;
+    }
 
     #avatar {
         width: 12vw;
@@ -68,7 +102,7 @@
     }
 
     #contact a {
-        color: white;
+        color: var(--light);
         text-decoration: none;
         font-size: 1.5vw;
     }
@@ -80,7 +114,7 @@
     }
 
     /* @media (max-width: 800px) {
-        #identification {
+        #informations {
             flex-direction: column;
         }
 
@@ -154,16 +188,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body id="body" style="size: 210mm 297mm;">
+<body id="body">
     <header>
-        <section id="identification">
-            <div>
+        <section id="informations">
+            <div id="informations-buttons">
+                <button onclick="printPage()"><i class="fa-solid fa-print"></i></button>
+                <button onclick="printPage()"><i class="fa-solid fa-circle-down"></i></button>
+            </div>
+            <div id="informations-text">
                 <h1 id="full-name">Nima Ghomri</h1>
                 <h2 id="profession">.NET Developer</h2>
                 <p id="tagline">Self-taught Programmer, Advocate of Clean Code.</p>
             </div>
             <img id="avatar" src="https://avatars.githubusercontent.com/u/85312667?v=4">
-            <button onclick="printPage()" style="position: absolute;">Print PDF</button>
         </section>
         <section id="contact">
             <a target="_blank" href="#"><i class="fa-solid fa-envelope"></i>nima.ghomri@gmail.com</a>

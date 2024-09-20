@@ -2,7 +2,7 @@
 
 <style>
     * {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: "Ubuntu", sans-serif;
     }
 
     body {
@@ -10,8 +10,7 @@
     }
 
     body section {
-        padding: 30px;
-        ;
+        /* padding: 1em 4em; */
     }
 
     #identification {
@@ -19,13 +18,16 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        padding: 3em;
     }
 
     #full-name {
         color: white;
+        font-weight: normal;
+        text-decoration: none;
         font-size: 4em;
+        line-height: 1em;
         margin: 0;
-        line-height: 2;
     }
 
     #job-title {
@@ -37,8 +39,8 @@
     #tagline {}
 
     #avatar {
-        width: 15em;
-        height: 15em;
+        width: 10em;
+        height: 10em;
         align-self: self-end;
         border: 6px solid rebeccapurple;
         border-radius: 30px;
@@ -53,6 +55,7 @@
         grid-auto-flow: column;
         grid-template-rows: repeat(5, 20%);
         grid-template-columns: 50% 50%;
+        padding: 1em 3em;
     }
 
     #contact a {
@@ -61,11 +64,11 @@
     }
 
     #contact i {
-        font-size: x-large;
+        font-size: xx-large;
         padding: 7px;
     }
 
-    @media (max-width: 800px) {
+    /* @media (max-width: 800px) {
         #identification {
             flex-direction: column;
         }
@@ -75,25 +78,68 @@
             height: 20em;
             align-self: center;
         }
+    } */
+
+    h1 {
+        color: rebeccapurple;
+        text-decoration: underline;
     }
+
+    @media print {
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    }
+
+    main {
+    column-count: 2; /* Creates 2 columns */
+    column-gap: 20px; /* Space between columns */
+    padding: 3em;
+}
 </style>
+
+<script>
+    function printPage() {
+        var element = document.getElementById('body');
+        var opt = {
+            margin: 0,
+            filename: 'Nima Ghomri - Resume.pdf',
+            // image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 75 },
+            jsPDF: { unit: 'mm', format: 'A4', orientation: 'portrait' }
+        };
+
+        html2pdf(element);
+    }
+</script>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nima Ghomri</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body>
+<body id="body" style="size: 210mm 297mm;">
     <header>
         <section id="identification">
             <div>
                 <h1 id="full-name">Nima Ghomri</h1>
                 <h2 id="job-title">.NET Developer</h2>
-                <p id="tagline">Self-taught Programmer, Advocate of Clean Code</p>
+                <p id="tagline">Self-taught Programmer, Advocate of Clean Code.</p>
             </div>
             <img id="avatar" src="https://avatars.githubusercontent.com/u/85312667?v=4">
+            <button onclick="printPage()" style="position: absolute;">Print PDF</button>
         </section>
         <section id="contact">
             <a target="_blank" href="#"><i class="fa-solid fa-envelope"></i>nima.ghomri@gmail.com</a>
@@ -113,33 +159,57 @@
         </section>
     </header>
     <main>
-        <section title="Work Experience">
+        <section title="Professional Experience">
+            <h1>Professional Experience</h1>
 
-            .NET Developer
-            Freelancer
-            01/2020 - Present, Develop .NET applications for online customers
-            ASP.NET
-            WPF
-            Console applications
-            WPF Developer
-            CFT Iran
-            01/2019 - 01/2020, Tehran, Iran
-            Fire Resistance WPF Application
-            Save profit for the company by converting a hand- calculating, time-consuming complex process into a fast
-            and
-            compact solver. Create a 3D GUI to visualize structures. Create a UI to import and export structure models.
-            Graphic Designer
-            Tarhe Badie
-            01/2013 - 01/2018, Rasht, Iran
-            Design billboards, stands. Design visit cards, brochures. Design logos, Icons
+            <h2>.NET Developer</h2>
+            <p>Hooshkar Pardaz</p>
+            <i>2021 - 2024</i>
+            <p>ERP</p>
+            <ul>
+                <li>Blazor</li>
+                <li>Web Api</li>
+                <li>WPF</li>
+                <li>Console applications</li>
+            </ul>
+
+            <h2>.NET Developer</h2>
+            <p>Freelancer</p>
+            <i>2020 - 2021</i>
+            <p>Develop .NET applications for online customers</p>
+            <ul>
+                <li>ASP.NET</li>
+                <li>WPF</li>
+                <li>Console applications</li>
+            </ul>
+
+            <h2>WPF Developer</h2>
+            <p>CFT Iran</p>
+            <i>2019 - 2020, Tehran, Iran</i>
+            <p>Fire Resistance Desktop Application</p>
+            <ul>
+                <li>Save profit for the company by converting a hand- calculating, time-consuming complex process into a
+                    fast and compact solver. </li>
+                <li>Create a 3D GUI to visualize structures.</li>
+                <li>Create a UI to import and export structure models.</li>
+            </ul>
+
+            <h2>Graphic Designer</h2>
+            <p>Tarhe Badie</p>
+            <i>2013 - 2018, Rasht, Iran</i>
+            <p>Fire Resistance Desktop Application</p>
+            <ul>
+                <li>Design billboards, stands. Design visit cards, brochures. Design logos, Icons</li>
+            </ul>
         </section>
         <section title="Education">
 
         </section>
         <section title="Skills">
             <div>C#</div>
-            <div>ASP.NET</div>
             <div>WPF</div>
+            <div>Blazor</div>
+            <div>ASP.NET</div>
             <div>Console App</div>
             <div>SOLID</div>
             <div>HTML</div>

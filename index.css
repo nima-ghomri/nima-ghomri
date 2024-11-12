@@ -1,0 +1,170 @@
+:root {
+    --light: white;
+    --dark: black;
+
+    --primary-light: #f0c887;
+    --primary: #EFB252;
+    --primary-dark: #D39633;
+
+    --secondary-light: #ce79d3;
+    --secondary: #9d5ca1;
+    --secondary-dark: #693E6C;
+}
+
+* {
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+#informations {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 4vw;
+}
+
+#informations:hover #informations-buttons button {
+    opacity: 0.5;
+}
+
+#informations #informations-buttons button:hover {
+    opacity: 0.8;
+}
+
+#informations-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#informations-buttons {
+    position: absolute;
+    left: 1vw;
+    top: 1vw;
+}
+
+#informations-buttons button {
+    font-size: 3vw;
+    color: var(--light);
+    background-color: transparent;
+    border: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#full-name {
+    color: var(--light);
+    font-weight: bold;
+    font-size: 6vw;
+    margin: 0;
+    padding: 0;
+}
+
+#profession {
+    font-weight: bold;
+    font-size: 3vw;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#tagline {
+    font-size: 1.5vw;
+    padding: 0;
+    margin: 0;
+}
+
+#avatar {
+    width: 12vw;
+    height: 12vw;
+    align-self: self-end;
+    border: .5vw solid var(--secondary-dark);
+    border-radius: 2vw;
+}
+
+#contact {
+    background-color: var(--primary-dark);
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(5, 20%);
+    grid-template-columns: 50% 50%;
+    padding: 1vw 3vw;
+}
+
+#contact a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+#contact i {
+    width: 2vw;
+    font-size: 2vw;
+    padding: .5vw;
+}
+
+/* @media (max-width: 800px) {
+    #informations {
+        flex-direction: column;
+    }
+
+    #avatar {
+        width: 20vw;
+        height: 20vw;
+        align-self: center;
+    }
+} */
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+main {
+    column-count: 2;
+    column-gap: 20px;
+    padding: 3vw;
+}
+
+main section h1 {
+    font-size: 3vw;
+    margin: 0;
+    color: var(--secondary-dark);
+    text-decoration: underline;
+}
+
+.job-title {
+    font-size: 2.5vw;
+    font-weight: 800;
+    margin: 3vw 0 0 0;
+}
+
+.job-company {
+    font-size: 2.5vw;
+    margin: 0 2vw 2vw 0;
+}
+
+.job-position-time {
+    color: var(--secondary);
+    line-height: 0;
+}
+
+.job-points li {
+    margin: 0 -2vw;
+}
+.job-points li::marker {
+    color: var(--secondary-dark);
+    font-size: 3vw;
+}

@@ -17,6 +17,30 @@ body {
     font-family: "Ubuntu Sans";
 }
 
+/* @media (max-width: 800px) {
+    #informations {
+        flex-direction: column;
+    }
+
+    #avatar {
+        width: 20vw;
+        height: 20vw;
+        align-self: center;
+    }
+} */
+
+@media print {
+    @page {
+        size: A4;
+        /* margin: 0; */
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
 #informations {
     background-color: var(--primary);
     padding: 2vw 4vw;
@@ -90,43 +114,19 @@ body {
     grid-auto-flow: column;
     grid-template-rows: repeat(5, 20%);
     grid-template-columns: 50% 50%;
-    padding: 1vw 3vw;
+    padding: .8vw 3vw;
 }
 
 #contact a {
     color: var(--light);
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 }
 
 #contact i {
     width: 2vw;
     font-size: 2vw;
     padding: .5vw;
-}
-
-/* @media (max-width: 800px) {
-    #informations {
-        flex-direction: column;
-    }
-
-    #avatar {
-        width: 20vw;
-        height: 20vw;
-        align-self: center;
-    }
-} */
-
-@media print {
-    @page {
-        size: A4;
-        margin: 0;
-    }
-
-    body {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
 }
 
 main {
@@ -136,24 +136,24 @@ main {
 }
 
 main section {
-    margin: 0 0 5vw 0;
+    margin: 0 0 2vw 0;
 }
 
 main section h1 {
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin: 0 0 1vw 0;
     color: var(--secondary-dark);
     text-decoration: underline;
 }
 
 main section h2 {
-    font-size: 2.3vw;
+    font-size: 2vw;
     font-weight: 800;
     margin: 1vw 0 0 0;
 }
 
 main section h3 {
-    font-size: 2.0vw;
+    font-size: 1.7vw;
     margin: 0 1vw 1vw 0;
     font-weight: normal;
     display: flex;
@@ -196,6 +196,7 @@ main section p {
 .chip-container * {
     background-color: var(--primary-light);
     display: inline-flex;
+    text-decoration: none;
 }
 
 .chip-container-normal {
@@ -203,10 +204,10 @@ main section p {
 }
 
 .chip-container-normal * {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     border-radius: 1vw;
     font-weight: bold;
-    padding: 1vw;
+    padding: .8vw;
 }
 
 .chip-container-small {
@@ -214,9 +215,9 @@ main section p {
 }
 
 .chip-container-small * {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     border-radius: .5vw;
     font-weight: normal;
     font-style: italic;
-    padding: .5vw;
+    padding: .3vw;
 }

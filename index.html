@@ -27,8 +27,8 @@
     <header>
         <section id="informations">
             <div id="informations-buttons">
-                <button onclick="print()" title="print"><i class="fa-solid fa-print"></i></button>
-                <button onclick="download()" title="download"><i class="fa-solid fa-circle-down"></i></button>
+                <button onclick="print()" title="Print"><i class="fa-solid fa-print"></i></button>
+                <button onclick="download()" title="Download"><i class="fa-solid fa-circle-down"></i></button>
             </div>
             <div id="informations-text">
                 <h1 id="full-name">Nima Ghomri</h1>
@@ -38,20 +38,25 @@
             <img id="avatar" src="https://avatars.githubusercontent.com/u/85312667?v=4">
         </section>
         <section id="contact">
-            <a target="_blank" href="#"><i class="fa-solid fa-envelope"></i>nima.ghomri@gmail.com</a>
-            <a target="_blank" href="#"><i class="fa-solid fa-phone"></i>+989908180786</a>
+            <a target="_blank" href="#">
+                <i class="fa-solid fa-envelope"></i>nima.ghomri@gmail.com</a>
+            <a target="_blank" href="#">
+                <i class="fa-solid fa-phone"></i>+989908180786</a>
             <a target="_blank" href="#"><i class="fa-solid fa-location-pin"></i>Karaj, Iran</a>
-            <a target="_blank" href="https://github.com/nima-ghomri"><i class="fa-brands fa-github"></i>nima-ghomri</a>
-            <a target="_blank" href="https://stackoverflow.com/users/9882771/nima-ghomri"><i
-                    class="fa-brands fa-stack-overflow"></i>nima-ghomri</a>
-            <a target="_blank" href="https://linkedin.com/in/nima-ghomri"><i
-                    class="fa-brands fa-linkedin"></i>nima-ghomri</a>
-            <a target="_blank" href="https://t.me/nimaghomri"><i class="fa-brands fa-telegram"></i>nimaghomri</a>
-            <a target="_blank" href="https://join.skype.com/invite/kFky8d1bVZDn"><i
-                    class="fa-brands fa-skype"></i>nima.ghomri</a>
-            <a target="_blank" href="https://instagram.com/nima_ghomri"><i
-                    class="fa-brands fa-instagram"></i>nima_ghomri</a>
-            <a target="_blank" href="https://twitter.com/GhomriNima"><i class="fa-brands fa-twitter"></i>GhomriNima</a>
+            <a target="_blank" href="https://github.com/nima-ghomri">
+                <i class="fa-brands fa-github"></i>nima-ghomri</a>
+            <a target="_blank" href="https://stackoverflow.com/users/9882771/nima-ghomri">
+                <i class="fa-brands fa-stack-overflow"></i>nima-ghomri</a>
+            <a target="_blank" href="https://linkedin.com/in/nima-ghomri">
+                <i class="fa-brands fa-linkedin"></i>nima-ghomri</a>
+            <a target="_blank" href="https://t.me/nimaghomri">
+                <i class="fa-brands fa-telegram"></i>nimaghomri</a>
+            <a target="_blank" href="https://join.skype.com/invite/kFky8d1bVZDn">
+                <i class="fa-brands fa-skype"></i>nima.ghomri</a>
+            <a target="_blank" href="https://instagram.com/nima_ghomri">
+                <i class="fa-brands fa-instagram"></i>nima_ghomri</a>
+            <a target="_blank" href="https://twitter.com/GhomriNima">
+                <i class="fa-brands fa-twitter"></i>nimaghomri</a>
         </section>
     </header>
     <main>
@@ -62,34 +67,69 @@
             <h2>.NET Lead Developer, CTO</h2>
             <h3>
                 Hooshkar Pardaz Paya
-                <span>Karaj, Iran (2021 - 2024)</span>
+                <span>Karaj, Iran (2021 - 2024)
+                    <a target="_blank" href="https://www.hooshkar.com/">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </span>
             </h3>
             <p>
-                ERP software.
-                Microservice, modular structure.
-                Product and categories tree structure using Entity Framewrok MPTT method.
-                Google OR, Production planning optimization.
+                An ERP software with tens of modules:
+                Product and categories managment (MPTT tree structure).
+                Production planning optimization. 
+                Invoice management (connection to goverment taxing api).
+                Messaging system.
             </p>
             <ul>
-                <li>Web Api</li>
-                <li>Blazor</li>
-                <li>WPF</li>
-                <li>Console</li>
+                <li>WPF client application, Blazor web assembly and server side.
+                    <div class="chip-container chip-container-small">
+                        <div>MaterialDesignXamlToolKit</div>
+                        <div>MudBlazor</div>
+                        <div>CommunityToolkit.MVVM</div>
+                    </div>
+                </li>
+                <li>Web api.
+                    <div class="chip-container chip-container-small">
+                        <div>Swagger</div>
+                        <div>Entity Framework</div>
+                    </div>
+                </li>
+                <li>Modular structure, Microservices. Managing people, orders, invoices, messaging, etc.
+                    <div class="chip-container chip-container-small">
+                        <div>Docker</div>
+                        <div>Voip</div>
+                        <div>MassTransit</div>
+                        <div>RabbitMQ</div>
+                    </div>
+                </li>
+                <li>Linear programming, optimizing production planning.
+                    <div class="chip-container chip-container-small">
+                        <div>Google-OR</div>
+                        <div>Microsoft.CodeAnalysis</div>
+                    </div>
+                </li>
+                <li>CI/CD, CLI.
+                    <div class="chip-container chip-container-small">
+                        <div>Azure</div>
+                        <div>Gitlab</div>
+                        <div>CommandLineUtils</div>
+                        <div>Smart Assembly</div>
+                    </div>
+                </li>
             </ul>
 
-            <!-- .Net Developer -->
-            <h2>.Net Developer</h2>
+            <!-- Developer -->
+            <h2>Developer</h2>
             <h3>
                 Freelancer
                 <span>Remote (2020 - 2021)</span>
             </h3>
             <p>
-                Develop .NET applications for online customers
+                Develop applications for online customers
             </p>
             <ul>
-                <li>WPF</li>
-                <li>Windows Form</li>
+                <li>WPF & Windows Form</li>
                 <li>Console applications</li>
+                <li>Expert Adviser</li>
             </ul>
 
             <!-- WPF Developer -->
@@ -145,7 +185,7 @@
                 <span>(2016 - 2019)</span>
             </h3>
             <p>
-                Numerical Modelling of Pollution Spread in Porous Media by
+                Thesis: Numerical Modelling of Pollution Spread in Porous Media by
                 Integration of Lattice Boltzmann Method and Genetic
                 Algorithm
             </p>
@@ -159,7 +199,7 @@
 
         <section>
             <h1>Skills</h1>
-            <div class="chip-container">
+            <div class="chip-container chip-container-normal">
                 <div>.Net</div>
                 <div>C#</div>
                 <div>WPF</div>
@@ -174,14 +214,16 @@
                 <div>SOLID</div>
                 <div>Material Design</div>
                 <div>MudBlazor</div>
-                <div>Google OR</div>
-                <div>Linear Programming</div>
                 <div>JavaScript</div>
                 <div>HTML</div>
                 <div>CSS</div>
+                <div>Google OR</div>
+                <div>Linear Programming</div>
                 <div>MQL5</div>
                 <div>Photoshop</div>
                 <div>Illustrator</div>
+                <div>DevOps</div>
+                <div>Obfuscation</div>
             </div>
         </section>
         <section>
@@ -192,21 +234,48 @@
         </section>
         <section>
             <h1>Certificates</h1>
+            <h3>
+                Version Control with Git
+                <span>
+                    Atlassian (2021)
+                    <a target="_blank" href="https://www.coursera.org/account/accomplishments/verify/GPYSDZHJJ6CW"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </span>
+            </h3>
+            <h3>
+                CS50 Introduction to Computer Science
+                <span>
+                    Harvard (2022)
+                    <a target="_blank"
+                        href="https://certificates.cs50.io/a1c2ac87-eea6-42aa-9217-464834065e2d.pdf?size=A4"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </span>
+            </h3>
         </section>
         <section>
             <h1>Projects</h1>
             <h3>
                 SingleCS
-                <a target="_blank" href="https://github.com/nima-ghomri/SingleCS"><i
-                        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a target="_blank" href="https://github.com/nima-ghomri/SingleCS">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </h3>
-            (Console app, C#, Regex)
+            <div class="chip-container chip-container-small">
+                <div>Console</div>
+                <div>Regex</div>
+                <div>WPF</div>
+            </div>
+
             <h3>
                 Memory Simulator
                 <a target="_blank" href="https://github.com/nima-ghomri/memory-simulator"><i
                         class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </h3>
-            (HTML, CSS, JavaScript)
+            <div class="chip-container chip-container-small">
+                <div>JavaScript</div>
+                <div>HTML</div>
+                <div>CSS</div>
+            </div>
         </section>
     </main>
 

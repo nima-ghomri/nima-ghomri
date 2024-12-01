@@ -12,28 +12,17 @@
     --secondary-dark: #693E6C;
 }
 
-* {
-    font-family: "Ubuntu Sans", sans-serif;
-}
-
 body {
     margin: 0;
+    font-family: "Ubuntu Sans";
 }
 
 #informations {
     background-color: var(--primary);
-    padding: 4vw;
+    padding: 2vw 4vw;
     justify-content: space-between;
     flex-direction: row;
     display: flex;
-}
-
-#informations:hover #informations-buttons button {
-    opacity: 0.5;
-}
-
-#informations #informations-buttons button:hover {
-    opacity: 0.8;
 }
 
 #informations-text {
@@ -55,6 +44,14 @@ body {
     cursor: pointer;
     border: none;
     opacity: 0;
+}
+
+#informations:hover #informations-buttons button {
+    opacity: 0.5;
+}
+
+#informations #informations-buttons button:hover {
+    opacity: 0.8;
 }
 
 #full-name {
@@ -134,7 +131,7 @@ body {
 
 main {
     column-count: 2;
-    column-gap: 20px;
+    column-gap: 3vw;
     padding: 3vw;
 }
 
@@ -150,14 +147,14 @@ main section h1 {
 }
 
 main section h2 {
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     font-weight: 800;
     margin: 1vw 0 0 0;
 }
 
 main section h3 {
-    font-size: 2.5vw;
-    margin: 0 2vw 2vw 0;
+    font-size: 2.0vw;
+    margin: 0 1vw 1vw 0;
     font-weight: normal;
     display: flex;
     justify-content: space-between;
@@ -170,14 +167,18 @@ main section h3 * {
     font-size: 1.5vw;
 }
 
+main section ul {
+    margin: -2vw 0 0 0;
+}
+
 main section li {
-    margin: 0 -2vw;
-    font-size: 2vw;
+    margin: 0 -2.5vw;
+    font-size: 1.5vw;
 }
 
 main section li::marker {
     color: var(--secondary-dark);
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 main section p {
@@ -190,14 +191,32 @@ main section p {
 .chip-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1vw;
 }
 
 .chip-container * {
     background-color: var(--primary-light);
     display: inline-flex;
-    border-radius: 1vw;
-    padding: 1vw;
-    font-weight: bold;
+}
+
+.chip-container-normal {
+    gap: 1vw;
+}
+
+.chip-container-normal * {
     font-size: 1.5vw;
+    border-radius: 1vw;
+    font-weight: bold;
+    padding: 1vw;
+}
+
+.chip-container-small {
+    gap: 0.5vw;
+}
+
+.chip-container-small * {
+    font-size: 1.5vw;
+    border-radius: .5vw;
+    font-weight: normal;
+    font-style: italic;
+    padding: .5vw;
 }

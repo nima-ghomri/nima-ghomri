@@ -1,7 +1,8 @@
-function print() {
+function printPdf() {   
+    window.open();
 }
 
-function download() {
+function downloadPdf() {
     var element = document.getElementsByTagName('body')[0];
     var opt = {
         margin: 0,

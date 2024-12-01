@@ -32,7 +32,7 @@ body {
 @media print {
     @page {
         size: A4;
-        
+
         /* margin: 0; */
     }
 
@@ -133,7 +133,7 @@ body {
 main {
     column-count: 2;
     column-gap: 3vw;
-    padding: 3vw;
+    padding: 3vw 3vw 0 3vw;
 }
 
 main section {

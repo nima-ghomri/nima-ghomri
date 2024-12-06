@@ -155,7 +155,7 @@ main section h2 {
 
 main section h3 {
     font-size: 1.7vw;
-    margin: 0 1vw 1vw 0;
+    margin: 0 1vw .5vw 0;
     font-weight: normal;
     display: flex;
     justify-content: space-between;
